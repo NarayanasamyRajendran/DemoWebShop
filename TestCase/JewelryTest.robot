@@ -44,7 +44,8 @@ Validate the jewelry functionality with filtering all product
 
 Validate the jewelry with add to cart
     [Documentation]    This test case will validate that product with add to cart
-    [Tags]    sanity
+    [Tags]    sanity.
+    
     JewelryResources.Click the jewelry element
     JewelryResources.Click the sort by dropdown button
     JewelryResources.Click low to high option in the dropdown list
