@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.6 on win32)" generated="2024-05-28T11:03:32.651113" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\Project\DemoWebShop\TestCase">
+<suite id="s1-s1" name="JewelryTest" source="E:\Project\DemoWebShop\TestCase\JewelryTest.robot">
+<test id="s1-s1-t1" name="Validate the price with range 0 t0 500 and remove" line="85">
+<kw name="Open the Browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:33.099104" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T11:03:33.097590" elapsed="4.113355"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:37.211945" level="INFO">Opening url 'https://demowebshop.tricentis.com/customer/info'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T11:03:37.211945" elapsed="2.455837"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T11:03:39.667782" elapsed="0.786088"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T11:03:40.455187" elapsed="0.002527"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:33.096588" elapsed="7.362127"/>
+</kw>
+<kw name="Click the jewelry element" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:40.459719" level="INFO">Clicking element 'xpath:(//a[@href='/jewelry'])[1]'.</msg>
+<arg>${jewelry_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:40.458715" elapsed="2.435766"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:40.458715" elapsed="2.435766"/>
+</kw>
+<kw name="Click the sort by dropdown button" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:42.896490" level="INFO">Clicking element 'xpath://select[@id='products-orderby']'.</msg>
+<arg>${click_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:42.895492" elapsed="1.030853"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:42.895492" elapsed="1.032367"/>
+</kw>
+<kw name="Click low to high option in the dropdown list" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:43.929870" level="INFO">Clicking element 'xpath:(//select[@id='products-orderby']//option)[4]'.</msg>
+<arg>${click_low_to_high}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:43.928872" elapsed="1.616682"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:43.928031" elapsed="1.617523"/>
+</kw>
+<kw name="Click A to Z option in the dropdown list" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:45.546996" level="INFO">Clicking element 'xpath:(//select[@id='products-orderby']//option)[2]'.</msg>
+<arg>${click_A_to_Z_product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:45.546996" elapsed="1.352124"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:45.545554" elapsed="1.353566"/>
+</kw>
+<kw name="Click between 0 to 500 range" owner="JewelryResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:46.901652" level="INFO">Clicking link 'xpath://a[contains(@href, 'price=0-500')]'.</msg>
+<arg>${click_first_range_price}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:46.901652" elapsed="2.473968"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:46.900638" elapsed="2.475514"/>
+</kw>
+<kw name="Click remove filter option" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:49.377690" level="INFO">Clicking element 'xpath://a[@class='remove-price-range-filter']'.</msg>
+<arg>${remove_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:49.377690" elapsed="1.855859"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:49.376152" elapsed="1.858402"/>
+</kw>
+<kw name="Close Browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T11:03:51.236550" elapsed="2.416231"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:51.235557" elapsed="2.417224"/>
+</kw>
+<doc>This test case will validate the price and remove</doc>
+<tag>sanity</tag>
+<status status="PASS" start="2024-05-28T11:03:33.094576" elapsed="20.558205"/>
+</test>
+<doc>To validate Profile information</doc>
+<status status="PASS" start="2024-05-28T11:03:32.709042" elapsed="20.944751"/>
+</suite>
+<status status="PASS" start="2024-05-28T11:03:32.674529" elapsed="20.981266"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">sanity</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="JewelryTest">TestCase.JewelryTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

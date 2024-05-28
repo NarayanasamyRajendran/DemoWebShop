@@ -1,0 +1,21 @@
+datasources:808d8eea8388030ef903a8ba3ab4cf321d9fd105
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:f1c476012879ffff1ef97e0f507defc1d4adca89
+--test TestCase.JewelryTest.Validate the jewelry functionality
+--test TestCase.JewelryTest.Validate the jewelry functionality without filtering
+--test TestCase.JewelryTest.Validate the jewelry functionality with filtering all product
+--test TestCase.JewelryTest.Validate the jewelry with add to cart
+--test TestCase.JewelryTest.Validate the price with range 0 t0 500
+--test TestCase.JewelryTest.Validate the price with range 500 t0 700
+--test TestCase.JewelryTest.Validate the price with range 0 t0 500 and remove
+--test TestCase.JewelryTest.Validate the coupon code process
+--test TestCase.JewelryTest.Validate the gift cart process
+--test TestCase.JewelryTest.Validate the price with range
+--test TestCase.MyAccountTest BackInStockSubscriptions.Validate the back in stock subscriptions
+--test TestCase.MyAccountTest ChangePassword.Validate the change password
+--test TestCase.MyAccountTest CustomerAddress.Validate the Customer Address
+--test TestCase.MyAccountTest EditCustomerAddress.Validate that edit the customer address
+--test TestCase.MyAccountTest Login.Validate MyAccount Information
+--test TestCase.MyAccountTest RewardPoints.Validate the Reward points
+--test TestCase.MyAddressTest Orders.Validate the order

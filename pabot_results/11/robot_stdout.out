@@ -1,0 +1,14 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.MyAccountTest ChangePassword :: To validate change password functi...
+==============================================================================
+Validate the change password                                          | PASS |
+------------------------------------------------------------------------------
+TestCase.MyAccountTest ChangePassword :: To validate change passwo... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCase                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  E:\Project\DemoWebShop\pabot_results\11\output.xml

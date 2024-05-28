@@ -1,0 +1,14 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.JewelryTest :: To validate Profile information                       
+==============================================================================
+Validate the coupon code process :: This test case will validate t... | PASS |
+------------------------------------------------------------------------------
+TestCase.JewelryTest :: To validate Profile information               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCase                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  E:\Project\DemoWebShop\pabot_results\7\output.xml

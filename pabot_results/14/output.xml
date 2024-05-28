@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.6 on win32)" generated="2024-05-28T11:03:32.534804" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\Project\DemoWebShop\TestCase">
+<suite id="s1-s1" name="MyAccountTest Login" source="E:\Project\DemoWebShop\TestCase\MyAccountTest_Login.robot">
+<test id="s1-s1-t1" name="Validate MyAccount Information" line="17">
+<kw name="Open the Browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:36.355909" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T11:03:36.354910" elapsed="4.747891"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:41.103802" level="INFO">Opening url 'https://demowebshop.tricentis.com/customer/info'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.103802" elapsed="2.765208"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T11:03:43.870024" elapsed="0.586630"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T11:03:44.456654" elapsed="0.003001"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:36.353356" elapsed="8.106299"/>
+</kw>
+<kw name="Validate the MyAccount information">
+<kw name="Fill login email" owner="MyAccountResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:44.463752" level="INFO">Typing text 'narayanasamy04082002@gmail.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>${login_email}</arg>
+<arg>narayanasamy04082002@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:44.462752" elapsed="2.078236"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:46.542989" level="INFO">Typing text 'narayana' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>${login_pass}</arg>
+<arg>narayana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:46.541989" elapsed="1.776327"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:48.320317" level="INFO">Clicking button 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:48.319317" elapsed="2.538837"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:44.461753" elapsed="6.397402"/>
+</kw>
+<kw name="Click the gender in checkbox field" owner="MyAccountResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:50.860671" level="INFO">Clicking element 'xpath://input[@id='gender-male']'.</msg>
+<arg>${gender_male_path}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.859155" elapsed="0.256051"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:50.859155" elapsed="0.256051"/>
+</kw>
+<kw name="Enter first name in the firstname field" owner="MyAccountResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:51.117206" level="INFO">Typing text 'narayana' into text field 'xpath://input[@id='FirstName']'.</msg>
+<arg>${firstname_path}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:51.116207" elapsed="0.599092"/>
+</kw>
+<arg>${_firstname}</arg>
+<status status="PASS" start="2024-05-28T11:03:51.115206" elapsed="0.600093"/>
+</kw>
+<kw name="Enter last name in the lastname field" owner="MyAccountResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:51.718353" level="INFO">Typing text 'samy' into text field 'xpath://input[@id='LastName']'.</msg>
+<arg>${lastname_path}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:51.717823" elapsed="0.362046"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:52.081381" level="INFO">Typing password into text field 'xpath://input[@id='LastName']'.</msg>
+<msg time="2024-05-28T11:03:52.264498" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${lastname_path}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:52.079869" elapsed="0.413023"/>
+</kw>
+<arg>${_lastname}</arg>
+<status status="PASS" start="2024-05-28T11:03:51.716313" elapsed="0.776579"/>
+</kw>
+<kw name="Enter email id in the email field" owner="MyAccountResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:52.494889" level="INFO">Typing text 'narayanasamy04082002@gmail.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>${email_path}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:52.493889" elapsed="0.400556"/>
+</kw>
+<arg>${_email}</arg>
+<status status="PASS" start="2024-05-28T11:03:52.492892" elapsed="0.401553"/>
+</kw>
+<kw name="Click save button" owner="MyAccountResources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:52.896444" level="INFO">Clicking button 'xpath://input[@value='Save']'.</msg>
+<arg>${save_path}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:52.896444" elapsed="0.947926"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:52.895446" elapsed="0.948924"/>
+</kw>
+<arg>_firstname=narayana</arg>
+<arg>_lastname=samy</arg>
+<arg>_email=narayanasamy04082002@gmail.com</arg>
+<doc>This test case will validate the customer info</doc>
+<status status="PASS" start="2024-05-28T11:03:44.459655" elapsed="9.384715"/>
+</kw>
+<kw name="Close Browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T11:03:53.846367" elapsed="2.261924"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:53.845368" elapsed="2.262923"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:36.349846" elapsed="19.759445"/>
+</test>
+<doc>To validate login and profile information</doc>
+<status status="PASS" start="2024-05-28T11:03:32.595766" elapsed="23.514528"/>
+</suite>
+<status status="PASS" start="2024-05-28T11:03:32.555856" elapsed="23.557729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="MyAccountTest Login">TestCase.MyAccountTest Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-28T11:03:36.342843" level="ERROR">Connection to remote server broken: [WinError 10061] No connection could be made because the target machine actively refused it</msg>
+<msg time="2024-05-28T11:03:36.344845" level="ERROR">Unable to connect to PabotLib via '127.0.0.1:8270'! Is PabotLib in use? Try 'pabot --pabotlib'</msg>
+<msg time="2024-05-28T11:03:36.344845" level="ERROR">Execution as been processes without --testlevelsplit</msg>
+</errors>
+</robot>

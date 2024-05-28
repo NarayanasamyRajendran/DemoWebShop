@@ -1,0 +1,14 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.MyAccountTest CustomerAddress :: To validate customer address info...
+==============================================================================
+Validate the Customer Address                                         | PASS |
+------------------------------------------------------------------------------
+TestCase.MyAccountTest CustomerAddress :: To validate customer add... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCase                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  E:\Project\DemoWebShop\pabot_results\12\output.xml

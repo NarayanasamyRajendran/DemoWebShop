@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.6 on win32)" generated="2024-05-28T11:03:32.530803" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\Project\DemoWebShop\TestCase">
+<suite id="s1-s1" name="MyAccountTest BackInStockSubscriptions" source="E:\Project\DemoWebShop\TestCase\MyAccountTest_BackInStockSubscriptions.robot">
+<test id="s1-s1-t1" name="Validate the back in stock subscriptions" line="10">
+<kw name="Open the Browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:32.961538" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T11:03:32.961538" elapsed="5.600286"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:38.562333" level="INFO">Opening url 'https://demowebshop.tricentis.com/customer/info'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T11:03:38.562333" elapsed="2.646592"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.208925" elapsed="0.701811"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.911738" elapsed="0.002885"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:32.960026" elapsed="8.954597"/>
+</kw>
+<kw name="Fill login email" owner="MyAccountResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:41.918388" level="INFO">Typing text 'narayanasamy04082002@gmail.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>${login_email}</arg>
+<arg>narayanasamy04082002@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.917050" elapsed="1.651946"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:43.570010" level="INFO">Typing text 'narayana' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>${login_pass}</arg>
+<arg>narayana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:43.568996" elapsed="1.775737"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:45.345753" level="INFO">Clicking button 'xpath://input[@value='Log in']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:45.344733" elapsed="2.880369"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:41.915936" elapsed="6.310168"/>
+</kw>
+<kw name="Click the back in stock subscriptions button" owner="MyAccountResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:48.228102" level="INFO">Clicking element 'xpath://a[text()='Back in stock subscriptions']'.</msg>
+<arg>${back_in_subscription}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:48.227104" elapsed="2.044588"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:48.226104" elapsed="2.045588"/>
+</kw>
+<kw name="Check whether Back in stock subscriptions is visible" owner="MyAccountResources">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:50.639157" level="INFO">Element 'xpath://h1[text()='My account - Back in stock subscriptions']' is displayed.</msg>
+<arg>${back_in_subscription_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.272696" elapsed="0.367459"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:50.271692" elapsed="0.368463"/>
+</kw>
+<kw name="Close Browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.641156" elapsed="3.811598"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:50.640155" elapsed="3.812599"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:32.959015" elapsed="21.494625"/>
+</test>
+<doc>To validate back in stock subscriptions</doc>
+<status status="PASS" start="2024-05-28T11:03:32.582163" elapsed="21.873480"/>
+</suite>
+<status status="PASS" start="2024-05-28T11:03:32.553857" elapsed="21.907607"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="MyAccountTest BackInStockSubscriptions">TestCase.MyAccountTest BackInStockSubscriptions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

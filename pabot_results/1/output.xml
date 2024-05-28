@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.6 on win32)" generated="2024-05-28T11:03:32.503113" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\Project\DemoWebShop\TestCase">
+<suite id="s1-s1" name="JewelryTest" source="E:\Project\DemoWebShop\TestCase\JewelryTest.robot">
+<test id="s1-s1-t1" name="Validate the jewelry functionality without filtering" line="21">
+<kw name="Open the Browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:32.939979" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T11:03:32.938980" elapsed="3.101608"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:36.041586" level="INFO">Opening url 'https://demowebshop.tricentis.com/customer/info'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T11:03:36.041586" elapsed="4.030624"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T11:03:40.072210" elapsed="0.650335"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T11:03:40.723544" elapsed="0.002523"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:32.937980" elapsed="7.789087"/>
+</kw>
+<kw name="Click the jewelry element" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:40.729068" level="INFO">Clicking element 'xpath:(//a[@href='/jewelry'])[1]'.</msg>
+<arg>${jewelry_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:40.728065" elapsed="2.140436"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:40.727067" elapsed="2.141434"/>
+</kw>
+<kw name="Check whether the jewelry is visible" owner="JewelryResources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:42.871618" level="INFO">Verifying element 'xpath://div[@class='page-title']//h1' contains exact text 'Jewelry'.</msg>
+<arg>${visible_jewelry}</arg>
+<arg>Jewelry</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T11:03:42.870620" elapsed="0.290487"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:42.869606" elapsed="0.291501"/>
+</kw>
+<kw name="Click the first product" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:43.164106" level="INFO">Clicking element 'xpath://h2[@class='product-title']/a'.</msg>
+<arg>${click_first_product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:43.163108" elapsed="2.872208"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:43.162108" elapsed="2.873208"/>
+</kw>
+<kw name="Close Browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T11:03:46.039477" elapsed="4.193111"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:46.037478" elapsed="4.196110"/>
+</kw>
+<doc>This test case will validate that without sort by product</doc>
+<tag>smoke</tag>
+<status status="PASS" start="2024-05-28T11:03:32.936979" elapsed="17.296609"/>
+</test>
+<doc>To validate Profile information</doc>
+<status status="PASS" start="2024-05-28T11:03:32.544858" elapsed="17.689730"/>
+</suite>
+<status status="PASS" start="2024-05-28T11:03:32.520798" elapsed="17.716797"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="JewelryTest">TestCase.JewelryTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

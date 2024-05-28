@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${login_email}    xpath://input[@id='Email']
 ${login_pass}    xpath://input[@id='Password']
-${login_btn}    xpath://input[@value='Log in']
+${login_btn}   xpath=//input[@class='button-1 login-button']
 ${profile_path}    (//a[@class='account'])[1]
 ${gender_male_path}    xpath://input[@id='gender-male']
 ${firstname_path}=    xpath://input[@id='FirstName']
@@ -42,7 +42,7 @@ ${back_in_subscription}    xpath://a[text()='Back in stock subscriptions']
 ${back_in_subscription_text}    xpath://h1[text()='My account - Back in stock subscriptions']
 ${reward_points}    css:a[class='active']
 ${reward_points_details}    xpath://strong[text()='History']
-
+${login}    xpath=//a[text()='Log in']
 ${order_path}    xpath:(//a[text()='Orders'])[1]
 ${no_order_path}    xpath://h1[text()='My account - Orders']
 
@@ -58,9 +58,11 @@ ${old_password_path}    xpath://input[@id='OldPassword']
 ${new_password_path}    xpath://input[@id='NewPassword']
 ${confirm_new_password_path}    xpath://input[@id='ConfirmNewPassword']
 ${visible_change_password}    xpath://div[@class='result']
+${clickaccount}    xpath:(//li/a)[1]
 
 *** Keywords ***
 Fill login email
+    Click Link    ${login}
     Input Text    ${login_email}    narayanasamy04082002@gmail.com
     Input Text    ${login_pass}    narayana
     Click Button    ${login_btn}
@@ -206,3 +208,6 @@ Check whether Password was changed is visible
 
 Check whether Password was changed are visible
     Should Be Equal As Strings    ${visible_change_password}    Password was changed 
+
+Click account
+    Click Link    ${clickaccount}

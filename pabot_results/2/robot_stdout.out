@@ -1,0 +1,14 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.JewelryTest :: To validate Profile information                       
+==============================================================================
+Validate the jewelry functionality with filtering all product :: T... | PASS |
+------------------------------------------------------------------------------
+TestCase.JewelryTest :: To validate Profile information               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCase                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  E:\Project\DemoWebShop\pabot_results\2\output.xml

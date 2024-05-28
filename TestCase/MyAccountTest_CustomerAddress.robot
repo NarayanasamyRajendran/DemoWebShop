@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation    To validate customer address information
 Library    SeleniumLibrary
-Test Setup    Open the Browser with url
-Test Teardown    Close Browser session
-Resource    E:\\Project\\DemoWebShop\\Resources\\MyAccountResources.robot
-Resource    E:\\Project\\DemoWebShop\\Resources\\GenericResources.robot
+Test Setup    open the browser
+Test Teardown    Close All Browsers
+Resource    ../Resources/GenericResources.robot
+Resource    ../Resources/MyAccountResources.robot
 Library    DataDriver    file=../TestData/Customer_Information.xlsx    sheet_name=Sheet1
 Test Template    Validate the Customer Address
 
@@ -27,6 +27,7 @@ Validate the Customer Address
     [Documentation]    This test case will validate the customer address
     [Arguments]    ${_firstname}    ${_lastname}    ${_email}    ${_company}    ${_city}    ${_address}    ${_zip}    ${_phone}
     MyAccountResources.Fill login email
+    MyAccountResources.Click account
     MyAccountResources.Click the addresses button
     MyAccountResources.Click new address button in the address page
     MyAccountResources.Check whether the Add new address is visible

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.6 on win32)" generated="2024-05-28T11:03:32.556856" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\Project\DemoWebShop\TestCase">
+<suite id="s1-s1" name="JewelryTest" source="E:\Project\DemoWebShop\TestCase\JewelryTest.robot">
+<test id="s1-s1-t1" name="Validate the price with range 0 t0 500" line="56">
+<kw name="Open the Browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:32.985665" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T11:03:32.984652" elapsed="5.647327"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:38.632987" level="INFO">Opening url 'https://demowebshop.tricentis.com/customer/info'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T11:03:38.632987" elapsed="2.639601"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.273682" elapsed="0.697194"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.972389" elapsed="0.002551"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:32.983140" elapsed="8.991800"/>
+</kw>
+<kw name="Click the jewelry element" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:41.978262" level="INFO">Clicking element 'xpath:(//a[@href='/jewelry'])[1]'.</msg>
+<arg>${jewelry_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:41.977263" elapsed="2.030486"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:41.976264" elapsed="2.032482"/>
+</kw>
+<kw name="Click the sort by dropdown button" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:44.010770" level="INFO">Clicking element 'xpath://select[@id='products-orderby']'.</msg>
+<arg>${click_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:44.009744" elapsed="1.106976"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:44.008746" elapsed="1.107974"/>
+</kw>
+<kw name="Click low to high option in the dropdown list" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:45.118795" level="INFO">Clicking element 'xpath:(//select[@id='products-orderby']//option)[4]'.</msg>
+<arg>${click_low_to_high}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:45.118795" elapsed="2.120152"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:45.117805" elapsed="2.122181"/>
+</kw>
+<kw name="Click A to Z option in the dropdown list" owner="JewelryResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:47.244983" level="INFO">Clicking element 'xpath:(//select[@id='products-orderby']//option)[2]'.</msg>
+<arg>${click_A_to_Z_product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:47.241985" elapsed="1.971517"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:47.239986" elapsed="1.974520"/>
+</kw>
+<kw name="Click between 0 to 500 range" owner="JewelryResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:49.227503" level="INFO">Clicking link 'xpath://a[contains(@href, 'price=0-500')]'.</msg>
+<arg>${click_first_range_price}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:49.221513" elapsed="1.627115"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:49.215508" elapsed="1.634122"/>
+</kw>
+<kw name="Verify all products are between 0 to 500" owner="JewelryResources">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:50.888791" level="INFO">@{prices} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="52e0b9701823f40b56dcde73dd9c9661", element="f.3FFF1816501E5B5C829CD0A671C57107.d.B338CEE7D8CED930155ECC3C477B93CF.e.190")&gt; | &lt;selenium.webd...</msg>
+<var>@{prices}</var>
+<arg>${product_prices}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.850628" elapsed="0.039165"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:50.935913" level="INFO">${price_text} = 130.00</msg>
+<var>${price_text}</var>
+<arg>${price_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.891794" elapsed="0.044119"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-05-28T11:03:50.938920" level="INFO">${price_value} = 130.0</msg>
+<var>${price_value}</var>
+<arg>${price_text.replace('$', '')}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.936910" elapsed="0.002010"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${price_value} &gt; 500</arg>
+<arg>Fail</arg>
+<arg>Product price ${price_value} is greater than 500</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.938920" elapsed="0.001003"/>
+</kw>
+<var name="${price_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="52e0b9701823f40b56dcde73dd9c9661", element="f.3FFF1816501E5B5C829CD0A671C57107.d.B338CEE7D8CED930155ECC3C477B93CF.e.190")&gt;</var>
+<status status="PASS" start="2024-05-28T11:03:50.890793" elapsed="0.049130"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:50.974020" level="INFO">${price_text} = 100.00</msg>
+<var>${price_text}</var>
+<arg>${price_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.940927" elapsed="0.033093"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-05-28T11:03:50.977018" level="INFO">${price_value} = 100.0</msg>
+<var>${price_value}</var>
+<arg>${price_text.replace('$', '')}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.975020" elapsed="0.001998"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${price_value} &gt; 500</arg>
+<arg>Fail</arg>
+<arg>Product price ${price_value} is greater than 500</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.977018" elapsed="0.001003"/>
+</kw>
+<var name="${price_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="52e0b9701823f40b56dcde73dd9c9661", element="f.3FFF1816501E5B5C829CD0A671C57107.d.B338CEE7D8CED930155ECC3C477B93CF.e.189")&gt;</var>
+<status status="PASS" start="2024-05-28T11:03:50.939923" elapsed="0.038098"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T11:03:51.032375" level="INFO">${price_text} = 360.00</msg>
+<var>${price_text}</var>
+<arg>${price_element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T11:03:50.978533" elapsed="0.053842"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-05-28T11:03:51.034376" level="INFO">${price_value} = 360.0</msg>
+<var>${price_value}</var>
+<arg>${price_text.replace('$', '')}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-05-28T11:03:51.032375" elapsed="0.002001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${price_value} &gt; 500</arg>
+<arg>Fail</arg>
+<arg>Product price ${price_value} is greater than 500</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-28T11:03:51.035375" elapsed="0.000000"/>
+</kw>
+<var name="${price_element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="52e0b9701823f40b56dcde73dd9c9661", element="f.3FFF1816501E5B5C829CD0A671C57107.d.B338CEE7D8CED930155ECC3C477B93CF.e.191")&gt;</var>
+<status status="PASS" start="2024-05-28T11:03:50.978533" elapsed="0.057850"/>
+</iter>
+<var>${price_element}</var>
+<value>@{prices}</value>
+<status status="PASS" start="2024-05-28T11:03:50.889793" elapsed="0.146590"/>
+</for>
+<status status="PASS" start="2024-05-28T11:03:50.849630" elapsed="0.186753"/>
+</kw>
+<kw name="Close Browser session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T11:03:51.037377" elapsed="3.739276"/>
+</kw>
+<status status="PASS" start="2024-05-28T11:03:51.036383" elapsed="3.741391"/>
+</kw>
+<doc>This test case will validate the price</doc>
+<tag>regression</tag>
+<status status="PASS" start="2024-05-28T11:03:32.982127" elapsed="21.795647"/>
+</test>
+<doc>To validate Profile information</doc>
+<status status="PASS" start="2024-05-28T11:03:32.606298" elapsed="22.172471"/>
+</suite>
+<status status="PASS" start="2024-05-28T11:03:32.577119" elapsed="22.205554"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="JewelryTest">TestCase.JewelryTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
